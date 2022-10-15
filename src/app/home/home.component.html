@@ -1,0 +1,35 @@
+<div>
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+        <div class="form-group">
+          <label for="homeTeam">Home Team</label>
+          <input
+            type="text"
+            class="form-control"
+            id="homeTeam"
+            required
+            [(ngModel)]="match.homeTeam"
+            name="homeTeam"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="awayTeam">Away Team</label>
+          <input
+            class="form-control"
+            id="awayTeam"
+            required
+            [(ngModel)]="match.awayTeam"
+            name="awayTeam"
+          />
+        </div>
+  
+        <button (click)="addMatch()" class="btn btn-success">Submit</button>
+      </div>
+  
+      <div *ngIf="submitted">
+        <h4>Match has been started successfully!</h4>
+        <button class="btn btn-success" (click)="newMatch()">Add</button>
+      </div>
+    </div>
+  </div>

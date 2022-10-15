@@ -1,0 +1,15 @@
+.content {
+    min-height: calc(100vh - 70px);
+}
+
+
+footer {
+    background: #42A5F5;
+    color: white;
+    line-height: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    width: 99.99%;
+    text-align: center;
+}
