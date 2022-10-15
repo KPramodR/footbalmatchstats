@@ -1,0 +1,43 @@
+<div>
+    <table class="table align-middle mb-0 bg-white" >
+      <thead>
+          <tr>
+              <th>Home Team</th>
+              <th>Home Team Score</th>
+              <th>Away Team</th>
+              <th>Away Team Score</th>
+              <th>Actions</th>
+  
+  
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let match of matches">
+              <td>{{ match.homeTeam}}</td>
+              <td>{{ match.homeTeamScore}}</td>
+              <td>{{ match.awayTeam}}</td>
+              <td>{{ match.awayTeamScore}}</td>
+              <td><tr>
+                <td><button
+                          type="submit"
+                          class="btn btn-success"
+                          (click)="endMatch(match.id)"
+                          >
+                    Update Score
+                  </button></td>
+                <td>
+                  <button
+                          type="submit"
+                          class="btn btn-success"
+                          (click)="endMatch(match.id)"
+                          >
+                    End Match
+                  </button>
+                </td>
+              </tr>
+              
+                </td>
+          </tr>
+      </tbody>
+  </table>
+   </div>

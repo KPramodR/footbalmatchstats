@@ -20,8 +20,12 @@ export class StatserviceService {
     return this.http.put(this.baseUrl+'/updatematch/'+id, data);
   }
 
-  updateMatchStatus(id: any, data: any): Observable<any> {
-    return this.http.put(this.baseUrl+'/finishmatch/'+id, data);
+  updateMatchStatus(id: any): Observable<any> {
+    return this.http.put(this.baseUrl+'/finishmatch/'+id,id);
+  }
+
+  deleteMatch(id: any): Observable<any> {
+    return this.http.delete(this.baseUrl+'/deletematch/'+id,id);
   }
 
   getAllRunningMatches(): Observable<Match[]> {

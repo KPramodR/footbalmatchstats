@@ -1,5 +1,15 @@
 @import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
-table {
+
+.submit-form {
+    max-width: 400px;
+    margin: auto;
+  }
+
+  .mat-tab-group {
+    margin-bottom: 48px;
+  }
+
+  table {
     margin-left: 2.5em;
     width: 90%;
   }

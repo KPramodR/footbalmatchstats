@@ -10,44 +10,45 @@ import { MatchsummaryComponent } from './matchsummary/matchsummary.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
+import { NewmatchadditionComponent } from './newmatchaddition/newmatchaddition.component'
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatCardModule } from '@angular/material/card';
-import {MatTableModule} from '@angular/material/table'
-
-import { FormsModule } from '@angular/forms';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MatTabsModule } from '@angular/material/tabs';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
-
+import { FormsModule,FormBuilder, FormGroup, Validator} from '@angular/forms';
+import { LivescoreadminComponent } from './livescoreadmin/livescoreadmin.component';
+import { SummaryadminComponent } from './summaryadmin/summaryadmin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    NewmatchadditionComponent,
     LivescoreComponent,
     MatchsummaryComponent,
     HeaderComponent,
     FooterComponent,
-    AboutComponent
+    AboutComponent,
+    LivescoreadminComponent,
+    SummaryadminComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatButtonModule,
-    MatIconModule,
-    MatProgressSpinnerModule,
     MatToolbarModule,
     MatCardModule,
-    MatTableModule,
     FormsModule,
-    NgbModule,
+    MatButtonModule,
+    ReactiveFormsModule,
+    MatTabsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
