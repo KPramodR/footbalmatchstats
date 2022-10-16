@@ -52,7 +52,7 @@ export class LivescoreadminComponent implements OnInit {
       },
       error: (e) => console.error(e)
     });
-   // window.location.reload();
+    window.location.reload();
   }
 
 
