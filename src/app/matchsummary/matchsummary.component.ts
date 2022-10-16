@@ -23,7 +23,6 @@ export class MatchsummaryComponent implements OnInit {
       .subscribe({
         next: (data) => {
           this.matches = data;
-          console.log(data);
         },
         error: (e) => console.error(e)
       });

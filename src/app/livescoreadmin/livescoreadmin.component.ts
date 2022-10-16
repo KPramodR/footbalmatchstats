@@ -9,17 +9,6 @@ import { StatserviceService } from '../statservice.service';
 })
 export class LivescoreadminComponent implements OnInit {
 
-  @Input() viewMode = false;
-
-  @Input() currentMatch: Match = {
-    id: 0,
-    homeTeam: '',
-    homeTeamScore:0,
-    awayTeam: '',
-    awayTeamScore: 0
-  };
-
-
   matches?: Match[];
 
   constructor(private statsService:StatserviceService) { }
@@ -33,7 +22,6 @@ export class LivescoreadminComponent implements OnInit {
       .subscribe({
         next: (data) => {
           this.matches = data;
-          console.log(data);
         },
         error: (e) => console.error(e)
       });
@@ -47,9 +35,7 @@ export class LivescoreadminComponent implements OnInit {
     };
 
     this.statsService.updateMatchScore(id, data).subscribe({
-      next: (res) => {
-        console.log(res);
-      },
+      next: (res) => {},
       error: (e) => console.error(e)
     });
     window.location.reload();
@@ -58,9 +44,7 @@ export class LivescoreadminComponent implements OnInit {
 
   endMatch(id?: number) : void {
     this.statsService.updateMatchStatus(id).subscribe({
-     next: (res) => {
-       console.log(res);
-     },
+     next: (res) => {},
      error: (e) => console.error(e)
    });
    window.location.reload();
