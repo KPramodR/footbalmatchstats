@@ -1,9 +1,9 @@
 @import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
 table {
-    margin-left: 2.5em;
-    width: 90%;
-  }
-  th,td {
-    width: 20%;
-    text-align: center;
-  }
+  margin-left: 2.5em;
+  width: 90%;
+}
+th,td {
+  width: 20%;
+  text-align: center;
+}

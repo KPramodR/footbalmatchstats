@@ -23,6 +23,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule,FormBuilder, FormGroup, Validator} from '@angular/forms';
 import { LivescoreadminComponent } from './livescoreadmin/livescoreadmin.component';
 import { SummaryadminComponent } from './summaryadmin/summaryadmin.component';
+import { UpdatescoreComponent } from './updatescore/updatescore.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { SummaryadminComponent } from './summaryadmin/summaryadmin.component';
     FooterComponent,
     AboutComponent,
     LivescoreadminComponent,
-    SummaryadminComponent
+    SummaryadminComponent,
+    UpdatescoreComponent
   ],
   imports: [
     BrowserModule,

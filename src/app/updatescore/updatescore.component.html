@@ -1,0 +1,33 @@
+<div>
+    <div class="submit-form">
+      <div >
+
+        
+        <div class="form-group">
+          <label for="homeTeam">Home Team</label>
+          <input
+            type="text"
+            class="form-control"
+            id="homeTeam"
+            required minlength="5"
+            [(ngModel)]="match.homeTeam"
+            name="homeTeam"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="awayTeam">Away Team</label>
+          <input
+            type="text"
+            class="form-control"
+            id="awayTeam"
+            required minlength="5"
+            [(ngModel)]="match.awayTeam"
+            name="awayTeam"
+          />
+        </div>
+  
+        <button (click)="updateMatch()" class="btn btn-success">Submit</button>
+      </div>
+    </div>
+  </div>

@@ -10,8 +10,7 @@ import { StatserviceService } from '../statservice.service';
 export class MatchsummaryComponent implements OnInit {
 
   matches?: Match[];
-  displayedColumns: string[] = ['homeTeam', 'homeTeamScore', 'awayTeam','awayTeamScore'];
-
+ 
   constructor(private statsService:StatserviceService) { }
 
 

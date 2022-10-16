@@ -14,14 +14,26 @@
       <tbody>
           <tr *ngFor="let match of matches">
               <td>{{ match.homeTeam}}</td>
-              <td>{{ match.homeTeamScore}}</td>
+              <td><input
+                type="text"
+                class="form-control"
+                id="homeTeamScore"
+                [(ngModel)]="match.homeTeamScore"
+                name="homeTeamScore"
+              /></td>
               <td>{{ match.awayTeam}}</td>
-              <td>{{ match.awayTeamScore}}</td>
+              <td><input
+                type="text"
+                class="form-control"
+                id="homeTeamScore"
+                [(ngModel)]="match.awayTeamScore"
+                name="homeTeamScore"
+              /></td>
               <td><tr>
                 <td><button
                           type="submit"
                           class="btn btn-success"
-                          (click)="endMatch(match.id)"
+                          (click)="updateScore(match.id,match.homeTeamScore,match.awayTeamScore)"
                           >
                     Update Score
                   </button></td>

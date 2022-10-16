@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Input } from '@angular/core';
 import { Match } from '../model/match.model';
 import { StatserviceService } from '../statservice.service';
 
@@ -8,6 +8,17 @@ import { StatserviceService } from '../statservice.service';
   styleUrls: ['./livescoreadmin.component.css']
 })
 export class LivescoreadminComponent implements OnInit {
+
+  @Input() viewMode = false;
+
+  @Input() currentMatch: Match = {
+    id: 0,
+    homeTeam: '',
+    homeTeamScore:0,
+    awayTeam: '',
+    awayTeamScore: 0
+  };
+
 
   matches?: Match[];
 
@@ -27,6 +38,23 @@ export class LivescoreadminComponent implements OnInit {
         error: (e) => console.error(e)
       });
   }
+
+  updateScore(id?: number, homeScore?: number, awayScore?: number) : void{
+
+    const data = {
+      homeTeamScore: homeScore,
+      awayTeamScore: awayScore
+    };
+
+    this.statsService.updateMatchScore(id, data).subscribe({
+      next: (res) => {
+        console.log(res);
+      },
+      error: (e) => console.error(e)
+    });
+   // window.location.reload();
+  }
+
 
   endMatch(id?: number) : void {
     this.statsService.updateMatchStatus(id).subscribe({

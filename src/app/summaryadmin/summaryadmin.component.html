@@ -5,16 +5,15 @@
           <tr>
               <th>Home Team</th>
               <th>Home Team Score</th>
-              <th></th>
               <th>Away Team</th>
               <th>Away Team Score</th>
+              <th>Actions</th>
           </tr>
       </thead>
       <tbody>
           <tr *ngFor="let match of matches">
               <td>{{ match.homeTeam}}</td>
               <td>{{ match.homeTeamScore}}</td>
-              <td>VS</td>
               <td>{{ match.awayTeam}}</td>
               <td>{{ match.awayTeamScore}}</td> 
               <td>

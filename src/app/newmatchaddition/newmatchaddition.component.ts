@@ -5,6 +5,7 @@ import { SummaryadminComponent} from '../summaryadmin/summaryadmin.component';
 import { LivescoreadminComponent } from '../livescoreadmin/livescoreadmin.component';
 import {ViewChild} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { FormGroup, FormControl, Validators, FormBuilder, AbstractControl } from '@angular/forms';
 
 @Component({
   selector: 'app-newmatchaddition',
@@ -13,7 +14,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class NewmatchadditionComponent implements OnInit {
 
- // selectedTabIndex: number;
+ // selectedTabIndex: number
+  requiredForm!: FormGroup;
   matches?: Match[];
   id?: number;
 
@@ -25,8 +27,13 @@ export class NewmatchadditionComponent implements OnInit {
   };
 
   
-  constructor(private statsService:StatserviceService //, private route: ActivatedRoute,private router: Router
-    ) { }
+  constructor(private statsService:StatserviceService, private fb: FormBuilder
+     //, private route: ActivatedRoute,private router: Router
+    ) { 
+      
+    }
+
+  
   submitted = false;
 
   addMatch(): void {
