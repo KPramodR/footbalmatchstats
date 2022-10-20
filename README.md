@@ -1,26 +1,43 @@
-This code has been developed as a demo of skills.
+This is a Demo API created to handle Match object and some of its associated basic functionalities.
 
-This code integrates with REST api developed in Spring boot at "http://localhost:8080/api" when running on local. Following functionalities are supported by this frontend at this moment.
+1. The code is developer in spring boot as a REST API which is exposing its API's at "http://localhost:8080/api".
+2. Swagger API helps to display the API and quickly test them in an ongoing basis. The swagger UI can be accessed at "http://localhost:8080/swagger-ui/".
+3. This code is using H2 in memory database for quick integration with logger functionalities.
+4. Individual Controller, Entity, Services have been created to maintain separation of durties and to keep the exposed code in a separate class.
+5. Proper placeholders are in place for providing documentation of each method and exposed entities. Due to time limit could not put comments on each and every method but having those provides clear idea to the reader about what the function does. Though for this code, the method names and class names are self explaining.
+6. Unit tests have been written using Junit for each of the method exposed in the service.
 
-1. Addition of new Match
-2. Updating score of a running match
-3. Updating status of a running match
-4. Display of all the running matches
-5. Display of all the finished matches based on the total score and their start time.
-6. Deletion of a finished match (if required)
+This code does not cover following things, which should have been in any code.
+1. The authentication and authorization part as its a basic code.
+2. Data validations, null pointer validations, security aspects
 
-This application does not perform any content validation or perform any security check. The same can be applied within enough time. In the ideal scenarion, the admin page where addition, updating of score, and changing match status will be controlled by the administrator account and two separate pages live matches and match summary will be available to general public who wants those details. 
+This code assumes that the api caller is a trusted inside entity and would have allready passed the authentication and is authorized to use this api.
 
-Uses of the platform:
+FOllowing are some screen captures of the application.
 
-1. Once the code is copied to the local start the application using 'ng serve', if required you might need to run command 'npm install' to copy needful libraries to local.
-2. Download the code from the api for this project available at git "https://github.com/KPramodR/statsapi.git" and using command "mvn spring-boot:run", run it as a api server.
-3. The Match Admin page will allow for addition of matches one at a time. You can add any number of matches you want.
-4. Live matches can be displayed in the Live matches tab, from where the match scores can be updated and the match status can be changed to Finished.
-5. The summary tab in the admin page can be used to view the finished matches also to delete the records if wanted.
-6. The other two pages Live score and Match summary respectively shows the Live match scores and Match summary which are also available on admin page with extra actions.
+Run the project
+![image](https://user-images.githubusercontent.com/115825104/196259232-17334e4f-3888-4d26-a4b6-88022e5bf4e6.png)
 
-There should not be any other blockes in running these apps. please reach out to pkininge@yahoo.co.in if any help required.
+Swagger UI
+![image](https://user-images.githubusercontent.com/115825104/196259472-f5ac6da1-af48-4a47-b081-c064e03dac1a.png)
 
 
- 
+Home Page
+![image](https://user-images.githubusercontent.com/115825104/196257735-92bbda53-7767-47c7-8bea-092392f7e8a4.png)
+
+Matches Added
+![image](https://user-images.githubusercontent.com/115825104/196258053-548eceb6-2f06-4de4-9fcc-3e81bfae605c.png)
+
+Scores Updated
+![image](https://user-images.githubusercontent.com/115825104/196258344-72c3322e-781b-46c2-8008-4e1f450e0aa5.png)
+
+Live Score page
+![image](https://user-images.githubusercontent.com/115825104/196258895-63c78f22-d51e-40fd-be05-7571c3e63e33.png)
+
+Finished Matches for admin
+![image](https://user-images.githubusercontent.com/115825104/196258439-50cde923-fb82-4eec-8883-7255ba050ed9.png)
+
+Summary Page
+![image](https://user-images.githubusercontent.com/115825104/196258533-431987e4-f935-48d7-89b6-4a1ebc89f618.png)
+
+
